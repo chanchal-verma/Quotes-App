@@ -1,0 +1,126 @@
+:root{
+    --main-color : #1DA1F2;
+    --light-color : #AAB8C2;
+    --secondary-color :  #797d7f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #222f3e;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 70vh;
+    width: 50vw;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    background: var(--main-color);
+    letter-spacing:0.5px ;
+    display: grid;
+    place-items: center;
+}
+.inner{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    transition: 1s;
+    opacity: 1;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50%,-50%);
+    overflow: hidden;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+    background: #fff;
+    font-size: 1.3rem;
+    border-radius: 5px;
+}
+.tweet::before{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 200px;
+    right: -30px;
+    top: -130px;
+    transform: rotate(-45deg);
+    z-index: -1;
+    box-shadow: 0 0 0.7rem rgba(0,0,0,0.5);
+    background: var(--light-color);
+}
+.tweet{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    margin: 0;
+    top: 15px;
+    right: 15px;
+    /* color: rgba(255, 255, 255 , 0.7); */
+}
+.tweet img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left:-26px ;
+    top: -6px;
+    cursor: pointer;
+    animation: rot 1s linear;
+
+}
+.tweet img:hover{
+    animation: rot 1s linear;
+}
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.text{
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem;
+    right: 2rem;
+}
+.author{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0 0 0;
+    font-family: 'Dosis', sans-serif;
+}
+.quotes{
+    padding: 1rem 0 0 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+
+}
+.openQuote{
+    font-size: 2.6rem;
+    color: #AAB8C2;
+}
+.button{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    width: -webkit-fill-available;
+    text-align: center;
+}
+#getQuotes{
+    width: -webkit-fill-available;
+    padding: 0.5rem 0 0.5rem 0;
+    background: #0278ae;
+    color: white;
+}
